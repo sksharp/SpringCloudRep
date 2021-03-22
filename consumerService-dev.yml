@@ -1,9 +1,5 @@
 spring:
   application:
-    name: 
-
-spring:
-  application:
     name: consumerService
   cloud:
     bus:
