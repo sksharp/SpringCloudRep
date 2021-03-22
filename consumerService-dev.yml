@@ -20,5 +20,5 @@ management:
 
 test:
   config:
-    info: githubConfig11111
+    info: devGithubConfig11111
     
