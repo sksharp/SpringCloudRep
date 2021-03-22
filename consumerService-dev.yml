@@ -1,6 +1,6 @@
 test:
   config:
-    info: githubConfig33333
+    info: githubConfig11111
     
 eureka:
   client:
