@@ -20,4 +20,4 @@ management:
 
 test:
   config:
-    info: grayGithubProviderConfig11111
+    info: devGithubProviderConfig11111
