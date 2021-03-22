@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: providerService
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: 65.49.222.208
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+test:
+  config:
+    info: grayGithubProviderConfig11111
