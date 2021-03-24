@@ -20,5 +20,5 @@ management:
 
 test:
   config:
-    info: defaultGithubConfig11111
+    info: defaultGithubConfig22222
     
