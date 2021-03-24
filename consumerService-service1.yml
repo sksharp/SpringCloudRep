@@ -20,4 +20,7 @@ management:
 
 test:
   config:
-    info: grayGithubConfig11111
+    info: service1GithubConfig11111
+
+server:
+  port: 9000
