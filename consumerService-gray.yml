@@ -20,8 +20,5 @@ management:
 
 test:
   config:
-    info: service2GithubConfig11111
-    
-server:
-  port: 9001
+    info: grayGithubConfig11111
     
