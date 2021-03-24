@@ -18,7 +18,4 @@ management:
 
 test:
   config:
-    info: service2GithubProviderConfig11111
-
-server:
-  port: 7001
+    info: grayGithubProviderConfig11111
