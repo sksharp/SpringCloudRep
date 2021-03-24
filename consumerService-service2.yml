@@ -20,5 +20,8 @@ management:
 
 test:
   config:
-    info: devGithubConfig11111
+    info: service2GithubConfig11111
+    
+server:
+  port: 9001
     
