@@ -18,4 +18,4 @@ management:
 
 test:
   config:
-    info: devGithubProviderConfig11111
+    info: devGithubProviderConfig22222
