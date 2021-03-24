@@ -16,9 +16,6 @@ management:
       exposure:
         include: "*"
 
-server:
-  port: 7000
-
 test:
   config:
-    info: service1GithubProviderConfig11111
+    info: devGithubProviderConfig11111
