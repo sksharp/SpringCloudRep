@@ -17,3 +17,17 @@ management:
     web:
       exposure:
         include: "*"
+
+rabbitmq:
+  config:
+    dl:
+      queue:
+        a:
+          name: dlQueueA
+        b:
+          name: dlQueueB
+        c:
+          name: dlQueueC
+    delay:
+      queue:
+        name: delayQueue
