@@ -31,3 +31,4 @@ rabbitmq:
     delay:
       queue:
         name: delayQueue
+
