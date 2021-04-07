@@ -21,3 +21,40 @@ management:
 test:
   config:
     info: devGithubConfig22222
+
+rabbitmq:
+  config:
+    ttl:
+      exchange:
+        name: ttlExchange
+      queue:
+        a:
+          name: ttlQueueA
+        b:
+          name: ttlQueueB
+        c:
+          name: ttlQueueC
+      routingKey:
+        a: ttlRouteKeyA
+        b: ttlRouteKeyB
+        c: ttlRouteKeyC
+    dl:
+      exchange:
+        name: dlExchange
+      queue:
+        a:
+          name: dlQueueA
+        b:
+          name: dlQueueB
+        c:
+          name: dlQueueC
+      routingKey:
+        a: dlRouteKeyA
+        b: dlRouteKeyB
+        c: dlRouteKeyC
+    delay:
+      exchange:
+        name: delayExchange
+      queue:
+        name: delayQueue
+      routingKey: delayRoutingKey
