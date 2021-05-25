@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: providerService
   cloud:
     bus:
       enabled: true
@@ -18,9 +16,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     #type: com.alibaba.druid.pool.DruidDataSource
   redis:
-    host: 192.168.126.128
+    #host: 192.168.126.128
     #password: redisPass
-    port: 6379
+    #port: 6379
+    cluster:
+        nodes: 192.168.126.128:6379,192.168.126.128:6479,192.168.126.128:6579
 
 mybatis:
   configuration:
