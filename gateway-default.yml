@@ -4,28 +4,6 @@ spring:
       enabled: true
       trace:
         enabled: true
-  rabbitmq:
-    host: 65.49.222.208
-    port: 5672
-    username: guest
-    password: guest
-  datasource:
-    url: jdbc:mysql://192.168.126.128:3306/stockEngine?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=true
-    username: root
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    #type: com.alibaba.druid.pool.DruidDataSource
-  redis:
-    #host: 192.168.126.128
-    #password: redisPass
-    #port: 6379
-    cluster:
-        nodes: 192.168.126.128:6379,192.168.126.128:6479,192.168.126.128:6579
-
-mybatis:
-  configuration:
-    cache-enabled: true
-  mapper-locations: classpath*:mapper/*.xml
 
 management:
   endpoints:
@@ -33,23 +11,19 @@ management:
       exposure:
         include: "*"
 
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 1000
-
-      circuitBreaker:
-        enabled: true
-        errorThresholdPercentage: 50
-        requestVolumeThreshold: 4
-
-      metrics:
-        rollingStats:
-          timeInMilliseconds: 10000
-
-test:
-  config:
-    info: defaultGithubProviderConfig11111
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: consumerService
+          uri: lb://${spring.cloud.gateway.routes[0].id}
+          predicates:
+            - Path=/${spring.cloud.gateway.routes[0].id}/**
+          filters:
+            - RewritePath=/${spring.cloud.gateway.routes[0].id}/, /
+        - id: providerService
+          uri: lb://${spring.cloud.gateway.routes[1].id}
+          predicates:
+            - Path=/${spring.cloud.gateway.routes[1].id}/**
+          filters:
+            - RewritePath=/${spring.cloud.gateway.routes[1].id}/, /
