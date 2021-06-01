@@ -16,7 +16,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     #type: com.alibaba.druid.pool.DruidDataSource
     hikari:
-      maximum-pool-size: 150
+      maximum-pool-size: 500
 
   redis:
     #host: 192.168.126.128
